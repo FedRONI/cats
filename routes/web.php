@@ -16,3 +16,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->post('cat/add', 'CatController@add');
+$router->get('cat/{cat_id}', 'CatController@show');
+$router->delete('cat/{cat_id}/delete', 'CatController@show');
